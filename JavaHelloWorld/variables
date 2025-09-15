@@ -1,1 +1,31 @@
+public class Variables {
+    public static void main(String[] args) {
+        String name = "Abhinav";
+        System.out.println(name);
+
+        // Final variables
+        final int myNum = 15;
+        // myNum = 20; --> this will generate an error
+        System.out.println(myNum);
+
+        // others types 
+        int mynum = 5;
+        float myfloatnum = 5.99f;
+        char myletter = 'D';
+        String mybool = "true";
+        boolean myboolis = Boolean.parseBoolean(mybool);
+        String mytext = "Heloo";
+        System.out.println(myNum);
+        System.out.println(myfloatnum);
+        System.out.println(myletter);
+        System.out.println(mytext);
+        System.out.println(myboolis);
+
+        // + character for concatenation 
+        String firstName = "John";
+        String LastName = "Doe";
+        String FullName = firstName + LastName;
+        System.out.println(FullName);
+    }
+}
 
