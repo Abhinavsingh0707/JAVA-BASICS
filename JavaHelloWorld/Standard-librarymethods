@@ -1,0 +1,15 @@
+public class Standardlibrarymethods {
+    public static void main(String[] args) {
+        System.out.println(Math.sqrt(15)); // square root built in function
+        System.out.println(Math.sqrt(16));
+
+        System.out.println(Math.floor(5.3));// floor built in function
+        System.out.println(Math.floor(5.8));
+
+        System.out.println(Math.ceil(5.3));// ceil built in function
+        System.out.println(Math.ceil(5.8));
+
+        //there mmore built in methods to use
+        return;
+    }
+}
