@@ -1,0 +1,43 @@
+
+
+class Algebra{
+    int a;
+    int b;
+
+        Algebra(int x , int y){
+            
+            System.out.println("Constructor of algebra class is called");
+            a = x;
+            b = y;
+        }
+        int add(){
+            int ans = a + b;
+            return ans;
+        }
+        int sub(){
+            return a-b;
+        }
+        int mul(){
+            return a*b;
+        }
+    }
+
+public class CallingMethods {
+    public static void main(String[] args) {
+        Algebra obj1 = new Algebra(5,7);
+        // Scanner sc = new Scanner(System.in);
+       // int x = sc.nextInt();
+       // int y = sc.nextInt();
+
+        System.out.println("Sum of the input number is: ");
+        // int ans = obj1.add();
+        System.out.println(obj1.add());
+        System.out.println(obj1.sub());
+        System.out.println(obj1.mul());
+
+        Algebra obj2 = new Algebra(10, 20);
+        System.out.println(obj2.add());
+        System.out.println(obj2.sub());
+        System.out.println(obj2.mul());
+    }
+}
