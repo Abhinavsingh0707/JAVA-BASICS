@@ -1,0 +1,63 @@
+//** INSIDE THE PACKAGE
+package pw.skills;
+// Within Class in Package Only
+public class App {
+    public String str_1 = " i am a public member";
+
+    void printFromClass(){
+        System.out.println("Within class : " + str_1);
+    }
+    public static void main(String[] args) {
+        App obj = new App();
+        obj.printFromClass();
+        System.out.println("Within class: "+ obj.str_1);
+        App2 obj2 =  new App2();
+        obj2.printFromOutSideClass();
+    }
+
+}
+// Outside the Class
+class App2 {
+    void printFromOutSideClass(){
+        App obj = new App();
+        System.out.println("within package, outside class :" + obj.str_1);
+    }
+}
+//** OUTSIDE THE PACKAGE
+import pw.skills.App;
+//  Outside the Package, non-child
+public class Outsidepwskills {
+    public static void main(String[] args) {
+    App obj = new App();
+    System.out.println( " Outside Package, non-child class: "+ obj.str_1);
+    App3 obj3 = new App3();
+    obj3.printFromChildClass();
+    }
+    
+}
+//Outside the Package, Child 
+// child class //parent class
+class App3 extends App{
+    void printFromChildClass(){
+        App3 obj3 = new App3();
+        
+        System.out.println( "From child class"+ obj3.str_1);
+    }
+}
+Access MODIFIER--> Public,Proctected,Default,Private
+1.Public--> within class(access)
+            outside the class(access)
+            outside the Package, Non-child(access)
+            outside the Package, Child(access)
+2.Protected-->within class(access)
+            outside the class(access)
+            outside the Package, Non-child(not-access)
+            outside the Package, Child(access)
+3.Default-->within class(access)
+            outside the class(access)
+            outside the Package, Non-child(not-access)
+            outside the Package, Child(not-access)
+4.Private-->within class(access)
+            outside the class(not-access)
+            outside the Package, Non-child(not-access)
+            outside the Package, Child(not-access)
